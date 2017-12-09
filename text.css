@@ -1,17 +1,13 @@
 body {
   font-family: 'Open-Sans', sans-serif;
+  background-color: #455A64;
   margin: 0;
 }
 
 .left-column {
-  background-color: #455A64;
   width: 50%;
   height: 100%;
-}
-
-section {
-  height: 100%;
-  margin: 50% 20%;
+  margin: 225px 50px;
 }
 
 h1 {
@@ -25,10 +21,22 @@ h1 {
   height: 40px;
 }
 
-#site-input,
-#link-input {
-  width: 543px;
+.site-input,
+.link-input {
   font-size: 30px;
   font-weight: 400;
   color: #BBBDBF;
+  width: 345px;
+  margin-top: 20px;
 }
+
+.enter-btn {
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFFFFF;
+  background-color: #FFC107;
+  width: 351px;
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
