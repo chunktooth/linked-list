@@ -7,8 +7,8 @@ body {
 .left-column {
   width: 50%;
   height: 100%;
-  margin: 25% 10%;
-  position: relative;
+  margin: 15% 4%;
+  position: fixed;
 }
 
 .left-column,
@@ -26,9 +26,11 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 76px;
   font-weight: 800;
   color: #FFFFFF;
+  width: 90%;
+  margin: 0;
 }
 
 .logo {
@@ -37,12 +39,14 @@ h1 {
 }
 
 .site-input,
-.link-input {
+.link-input,
+form {
   font-size: 30px;
   font-weight: 400;
   color: #BBBDBF;
-  width: 345px;
-  margin-top: 20px;
+  border: none;
+  width: 90%;
+  margin: 20px 0;
 }
 
 .enter-btn {
@@ -50,7 +54,7 @@ h1 {
   font-weight: 800;
   color: #FFFFFF;
   background-color: #FFC107;
-  width: 351px;
+  width: 90%;
   padding: 12px 0;
   margin-top: 20px;
 }
@@ -58,18 +62,27 @@ h1 {
 .site-box {
   font-weight: 400;
   border: solid #607D8B;
-  padding: 8px 12px;
+  background-color: #FFFFFF;
   margin: 8px 12px;
 }
 
-h2 {
+.site-title,
+.site-url {
+  border-width: 5px;
+  border-bottom: solid 2px #CFD8DC;
+  padding: 10px 0;
+  margin: 10px 20px;
+}
+
+.site-title {
   font-size: 30px;
   font-weight: 800;
   color: #455A64;
 }
 
 .site-url {
-  font-size: 16px;
+  font-size: 20px;
+  color: #607D8B;
 }
 
 .read-btn,
@@ -77,11 +90,16 @@ h2 {
   font-size: 14px;
   border: none;
   background: none;
+  color: #455A64;
 }
 
-.read-btn:hover,
-.delete-btn:hover {
+.read-btn {
+
+}
+
+.site-url:hover,
+.read-btn:hover {
   font-weight: 800;
-  color:  ;
+  color: #455A64;
 }
 
