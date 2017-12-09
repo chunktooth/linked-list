@@ -7,7 +7,22 @@ body {
 .left-column {
   width: 50%;
   height: 100%;
-  margin: 225px 50px;
+  margin: 25% 10%;
+  position: relative;
+}
+
+.left-column,
+.right-column {
+  display: inline-block;
+}
+
+.right-column {
+  width: 50%;
+  height: 100%;
+  background-color: #CFD8DC;
+  margin: 0;
+  position: absolute;
+  left: 50%;
 }
 
 h1 {
@@ -38,5 +53,35 @@ h1 {
   width: 351px;
   padding: 12px 0;
   margin-top: 20px;
+}
+
+.site-box {
+  font-weight: 400;
+  border: solid #607D8B;
+  padding: 8px 12px;
+  margin: 8px 12px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #455A64;
+}
+
+.site-url {
+  font-size: 16px;
+}
+
+.read-btn,
+.delete-btn {
+  font-size: 14px;
+  border: none;
+  background: none;
+}
+
+.read-btn:hover,
+.delete-btn:hover {
+  font-weight: 800;
+  color:  ;
 }
 
