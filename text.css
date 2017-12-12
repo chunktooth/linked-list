@@ -25,6 +25,9 @@ body {
   left: 50%;
 }
 
+a {
+  display: block;
+}
 header {
   margin: 230px 100px;
 }
@@ -42,12 +45,11 @@ h1 {
   height: 40px;
 }
 
-.site-input,
+.title-input,
 .link-input,
 form {
   font-size: 30px;
   font-weight: 400;
-  color:  ;
   border: none;
   width: 90%;
   margin: 10px 0;
@@ -89,8 +91,9 @@ form {
   color: #607D8B;
 }
 
-.read-btn,
-.delete-btn {
+.read,
+.delete-btn,
+.read-red {
   font-weight: 400;
   font-size: 14px;
   border: none;
@@ -100,14 +103,18 @@ form {
   margin-bottom: 12px;
 }
 
-.read-btn {
+.read {
   text-decoration: underline #455A64;
   position: relative;
   left: 2%;
 }
 
-.read {
+.read-red {
+  font-weight: 800;
+  text-decoration: none;
   color: #F05A28; 
+  position: relative;
+  left: 2%;
 }
 
 .delete-btn {
@@ -117,7 +124,7 @@ form {
 }
 
 .site-url:hover,
-.read-btn:hover {
+.read:hover {
   font-weight: 800;
   color: #455A64;
   text-decoration: underline #FFC107;
