@@ -14,6 +14,7 @@ $('.read').on('click', function() {
     $(this).toggleClass('read-red');
 });
 
+
 // $('.delete-btn')on('click', function() {
 //   var linkInput = $('.link-input').val();
 //   $(linkInput).remove();
