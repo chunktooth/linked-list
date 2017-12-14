@@ -10,10 +10,6 @@ body {
   height: 100%;
   background-color: #455A64;
   position: fixed;
-}
-
-.left-column,
-.right-column {
   display: inline-block;
 }
 
@@ -23,22 +19,21 @@ body {
   background-color: #CFD8DC;
   position: absolute;
   left: 50%;
+  display: inline-block;
 }
 
-a {
-  display: block;
-}
 header {
-  margin: 230px 100px;
+  margin-top: 250px;
+  margin-left: 100px;
+  width: 100%;
 }
 
 h1 {
-  font-size: 45px ;
+  font-size: 5.3vw;
   font-weight: 800;
   color: #FFFFFF;
-  width: 90%;
-  margin: 0;
-}
+  margin: auto 0;
+ }
 
 .logo {
   width: 70px;
@@ -46,13 +41,13 @@ h1 {
 }
 
 .title-input,
-.link-input,
-form {
+.link-input {
   font-size: 30px;
   font-weight: 400;
   border: none;
-  width: 90%;
-  margin: 10px 0;
+  width: 69%;
+  margin-top: 12px;
+  display: block;
 }
 
 .enter-btn {
@@ -60,7 +55,7 @@ form {
   font-weight: 800;
   color: #FFFFFF;
   background-color: #FFC107;
-  width: 90%;
+  width: 69%;
   padding: 12px 0;
   margin-top: 20px;
 }
@@ -109,7 +104,8 @@ form {
   left: 2%;
 }
 
-.read-red {
+.read-red,
+.read-red:hover {
   font-weight: 800;
   text-decoration: none;
   color: #F05A28; 

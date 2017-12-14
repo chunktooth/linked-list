@@ -1,31 +1,37 @@
-// most recent JS
+ $('.enter-btn').on('click', submitInput);
 
-
-$('.enter-btn').on('click', function() {
+function submitInput() {
     var titleInput = $('.title-input').val();
     var linkInput = $('.link-input').val();
-    event.preventDefault();
-    $('.site-title').text(titleInput);
-    $('.site-url').text(linkInput);
-    $(':input').val('');
+    $('form')[0].reset();
+    addBox(titleInput, linkInput);
+}
+
+
+function addBox(titleInput, linkInput) {
+    var newBox = $('.right-column').append(`<div class="site-box">
+    <h2 class="site-title">${titleInput}</h2>
+    <p class="site-url">${linkInput}</p>
+    <button class="read">Read</button>
+    <button class="delete-btn">Delete</button>
+  </div>`);
+}
+
+
+$('.right-column').on('click', function(event) {
+    if(event.target.matches('.read')) {
+        readLink(event);
+    }
+    if(event.target.matches('.delete-btn')) {
+        deleteLink(event);
+    }
 });
-
-$('.read').on('click', function() {
-    $(this).toggleClass('read-red');
-});
-
-
-// find better way to restore default values!!!
-$('.delete-btn').on('click', function() {
-  var siteTitle = $('.site-title');
-  var siteUrl = $('.site-url');
-  $(siteTitle).text('The Website Title');
-  $(siteUrl).text('www.thewebsiteurl.com');
-});
+function readLink(event) {
+    event.target.classList.add('read-red');
+    event.target.parentNode.style.backgroundColor = '#F2F4F4';
+}
+function deleteLink(event) {
+    event.target.parentNode.remove();
+}
 
 
-
-
-
-
-// change .site-url from on 'click' to 'keyup'
