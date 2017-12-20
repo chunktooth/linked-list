@@ -22,12 +22,15 @@ body {
   display: inline-block;
 }
 
+/* left styles */
+
 header {
   margin-top: 250px;
   margin-left: 100px;
   width: 100%;
 }
 
+/* form styles */
 h1 {
   font-size: 5.3vw;
   font-weight: 800;
@@ -104,13 +107,14 @@ h1 {
   left: 2%;
 }
 
-.read-red,
-.read-red:hover {
+
+.cardRead {
   font-weight: 800;
   text-decoration: none;
   color: #F05A28; 
   position: relative;
   left: 2%;
+  background-color: lightgrey;
 }
 
 .delete-btn {

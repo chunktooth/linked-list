@@ -1,37 +1,47 @@
- $('.enter-btn').on('click', submitInput);
+// keep total current links count
+// keep total current read & unread count
+// display error when 1/2 inputs blank
+// valid URL only
+// clear all read bookmarks
 
-function submitInput() {
-    var titleInput = $('.title-input').val();
-    var linkInput = $('.link-input').val();
-    $('form')[0].reset();
-    addBox(titleInput, linkInput);
+$('.title-input').on('input', enableButton);
+$('.link-input').on('input', enableButton);
+$('.enter-btn').on('click', addToCard);
+$('.right-column').on('click', '.enter-btn', addToCard);
+$('.right-column').on('click', '.read', readCard);
+$('.right-column').on('click', '.delete-btn', deleteCard);
+
+function enableButton(e) {
+    e.preventDefault();
+    var titleInput = $('.title-input')
+    var linkInput = $('.link-input');
+    if(titleInput.val() && linkInput.val()) {
+        $('.enter-btn').attr('disabled', false); 
+    } else {
+        $('.enter-btn').attr('disabled', true);
+    }
 }
 
-
-function addBox(titleInput, linkInput) {
-    var newBox = $('.right-column').append(`<div class="site-box">
+function addToCard(e){
+    e.preventDefault();
+    var titleInput = $('.title-input').val();
+    var linkInput = $('.link-input').val();
+    $('.title-input').val('');
+    $('.link-input').val('');
+    $('.right-column').append(`<div class="site-box">
     <h2 class="site-title">${titleInput}</h2>
-    <p class="site-url">${linkInput}</p>
+    <a class="site-url" href=${linkInput}>${linkInput}</a>
     <button class="read">Read</button>
     <button class="delete-btn">Delete</button>
   </div>`);
 }
 
-
-$('.right-column').on('click', function(event) {
-    if(event.target.matches('.read')) {
-        readLink(event);
-    }
-    if(event.target.matches('.delete-btn')) {
-        deleteLink(event);
-    }
-});
-function readLink(event) {
-    event.target.classList.add('read-red');
-    event.target.parentNode.style.backgroundColor = '#F2F4F4';
+function readCard() {
+    $(this).parent().toggleClass('cardRead');
 }
-function deleteLink(event) {
-    event.target.parentNode.remove();
+
+function deleteCard() {
+    $(this).parent().remove('.site-box');
 }
 
 
