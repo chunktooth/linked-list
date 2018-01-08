@@ -1,19 +1,18 @@
-// keep total current links count
-// keep total current read & unread count
 // display error when 1/2 inputs blank
 // valid URL only
+// keep total current links count
+// keep total current read & unread count
 // clear all read bookmarks
 
 $('.title-input').on('input', enableButton);
 $('.link-input').on('input', enableButton);
 $('.enter-btn').on('click', addToCard);
-$('.right-column').on('click', '.enter-btn', addToCard);
 $('.right-column').on('click', '.read', readCard);
 $('.right-column').on('click', '.delete-btn', deleteCard);
 
 function enableButton(e) {
     e.preventDefault();
-    var titleInput = $('.title-input')
+    var titleInput = $('.title-input');
     var linkInput = $('.link-input');
     if(titleInput.val() && linkInput.val()) {
         $('.enter-btn').attr('disabled', false); 
@@ -37,11 +36,9 @@ function addToCard(e){
 }
 
 function readCard() {
-    $(this).parent().toggleClass('cardRead');
+    $(this).parent().toggleClass('card-read');
 }
 
 function deleteCard() {
-    $(this).parent().remove('.site-box');
+    $(this).parent().remove();
 }
-
-
