@@ -6,39 +6,39 @@ body {
 }
 
 .left-column {
+  position: fixed;
+  display: inline-block;
   width: 50%;
   height: 100%;
   background-color: #455A64;
-  position: fixed;
-  display: inline-block;
 }
 
 .right-column {
-  width: 50%;
-  height: 100%;
-  background-color: #CFD8DC;
   position: absolute;
   left: 50%;
   display: inline-block;
+  width: 50%;
+  height: 100%;
+  background-color: #CFD8DC;
 }
 
 /* left styles */
 
 .submit-field {
     position: relative;
-    top: 29%;
-    left: 19%;
-    width: 58%;
+    top: 17%;
+    left: 13%;
+    width: 69%;
     padding: 35px;
     box-sizing: border-box;
 }
 
 /* form styles */
 h1 {
-  font-size: 47.8px;
+  /*margin: auto 0;*/
+  font-size: 60.8px;
   font-weight: 800;
   color: #FFFFFF;
-  margin: auto 0;
  }
 
 .logo {
@@ -64,6 +64,10 @@ h1 {
   display: inline-block;
   font-weight: 800;
   color: #FFC107;
+}
+
+.space {
+  margin-right: 5px;
 }
 
 .enter-btn {
@@ -107,7 +111,7 @@ h1 {
   color: #607D8B;
 }
 
-.read,
+.to-read,
 .delete-btn {
   font-weight: 400;
   font-size: 14px;
@@ -118,7 +122,7 @@ h1 {
   margin-bottom: 12px;
 }
 
-.read {
+.to-read {
   position: relative;
   left: 2%;
   text-decoration: underline #455A64;
@@ -152,9 +156,10 @@ h1 {
   text-decoration: underline #FFC107; 
 }
 
-@media screen and (max-width: 1024px) {
-  .submit-field {
-    left: 10%;
-    width: 81%;
-  }      
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

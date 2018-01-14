@@ -1,10 +1,9 @@
 // keep total current read & unread count
 // clear all read bookmarks
-
 $('.title-input').on('input', enableButton);
 $('.link-input').on('input', enableButton);
 $('.enter-btn').on('click', addToCard);
-$('.right-column').on('click', '.read', readCard);
+$('.right-column').on('click', '.to-read', readCard);
 $('.right-column').on('click', '.delete-btn', deleteCard);
 
 function enableButton(e) {
@@ -13,7 +12,6 @@ function enableButton(e) {
     var linkInput = $('.link-input');
     if(titleInput.val() && linkInput.val()) {
         $('.enter-btn').attr('disabled', false);
-        $('.required-input').text('');
         validateLink();
     } else {
         $('.enter-btn').attr('disabled', true);
@@ -28,7 +26,7 @@ function addToCard(e){
     $('.right-column').append(`<div class="site-box">
     <h2 class="site-title">${titleInput}</h2>
     <a class="site-url" href=${linkInput}>${linkInput}</a>
-    <button class="read">Mark as Read</button>
+    <button class="to-read">Mark as Read</button>
     <button class="delete-btn">Delete</button>
   </div>`);
     clearFields();
@@ -60,10 +58,8 @@ function validateLink() {
 function readCard() {
     $(this).toggleClass('read-in-red');
     $(this).parent().toggleClass('marked-read');
-    // var readCards = $('.read-in-red');
-    // for(var i = 0; i < readCards.length; i++) {
-    //     console.log(readCards[i]);
-    // }  
+    $('#read-counter').text($('.read-in-red').length);
+    $
 }
 
 function deleteCard() {
