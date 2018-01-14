@@ -25,16 +25,17 @@ body {
 /* left styles */
 
 .submit-field {
-  position: relative;
-  top: 30%;
-  width: 100%;
-  padding: 71px;
-  box-sizing: border-box;
+    position: relative;
+    top: 29%;
+    left: 19%;
+    width: 58%;
+    padding: 35px;
+    box-sizing: border-box;
 }
 
 /* form styles */
 h1 {
-  font-size: 50px;
+  font-size: 47.8px;
   font-weight: 800;
   color: #FFFFFF;
   margin: auto 0;
@@ -142,4 +143,11 @@ h1 {
 
 .delete-btn:hover {
   text-decoration: underline #FFC107; 
+}
+
+@media screen and (max-width: 1024px) {
+  .submit-field {
+    left: 10%;
+    width: 81%;
+  }      
 }
