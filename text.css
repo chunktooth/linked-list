@@ -60,6 +60,12 @@ h1 {
   display: block;
 }
 
+.counters {
+  display: inline-block;
+  font-weight: 800;
+  color: #FFC107;
+}
+
 .enter-btn {
   font-size: 16px;
   font-weight: 800;
@@ -123,16 +129,16 @@ h1 {
   background-color: lightgrey;
 }
 
-.red-read{
+.read-in-red {
   font-weight: 800;
   text-decoration: none;
   color: #F05A28; 
 }
 
 .delete-btn {
-  text-decoration: underline #455A64;
   position: absolute;
   right: 4%;
+  text-decoration: underline #455A64;
 }
 
 .site-url:hover,
