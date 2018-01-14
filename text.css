@@ -24,15 +24,17 @@ body {
 
 /* left styles */
 
-header {
-  margin-top: 250px;
-  margin-left: 100px;
+.submit-field {
+  position: relative;
+  top: 30%;
   width: 100%;
+  padding: 71px;
+  box-sizing: border-box;
 }
 
 /* form styles */
 h1 {
-  font-size: 5.3vw;
+  font-size: 50px;
   font-weight: 800;
   color: #FFFFFF;
   margin: auto 0;
@@ -43,12 +45,16 @@ h1 {
   height: 40px;
 }
 
+.required-input {
+  color: #FFFFFF;
+}
+
 .title-input,
 .link-input {
   font-size: 30px;
   font-weight: 400;
   border: none;
-  width: 69%;
+  width: 100%;
   margin-top: 12px;
   display: block;
 }
@@ -58,9 +64,13 @@ h1 {
   font-weight: 800;
   color: #FFFFFF;
   background-color: #FFC107;
-  width: 69%;
+  width: 100%;
   padding: 12px 0;
   margin-top: 20px;
+}
+
+.enter-btn:disabled {
+  background-color: #CFD8DC;
 }
 
 .site-box {
@@ -90,8 +100,7 @@ h1 {
 }
 
 .read,
-.delete-btn,
-.read-red {
+.delete-btn {
   font-weight: 400;
   font-size: 14px;
   border: none;
@@ -102,19 +111,20 @@ h1 {
 }
 
 .read {
-  text-decoration: underline #455A64;
   position: relative;
   left: 2%;
+  text-decoration: underline #455A64;
 }
 
+.marked-read {
+  position: relative;
+  background-color: lightgrey;
+}
 
-.cardRead {
+.marked-read.read {
   font-weight: 800;
   text-decoration: none;
   color: #F05A28; 
-  position: relative;
-  left: 2%;
-  background-color: lightgrey;
 }
 
 .delete-btn {
