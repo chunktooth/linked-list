@@ -1,4 +1,3 @@
-// keep total current links count
 // keep total current read & unread count
 // clear all read bookmarks
 
@@ -31,10 +30,19 @@ function addToCard(e){
     <a class="site-url" href=${linkInput}>${linkInput}</a>
     <button class="read">Mark as Read</button>
     <button class="delete-btn">Delete</button>
-  </div>`);   
+  </div>`);
+    clearFields();
+    countTotalCards();   
+}
+
+function clearFields() {
     $('.title-input').val('');
     $('.link-input').val('');
     $('.required-input').text('');
+}
+
+function countTotalCards() {
+    $('#link-counter').text($('.site-box').length);
 }
 
 function validateLink() {
@@ -52,11 +60,10 @@ function validateLink() {
 function readCard() {
     $(this).toggleClass('read-in-red');
     $(this).parent().toggleClass('marked-read');
-    var readCards = $('.read-in-red');
-    for(var i = 0; i < readCards.length; i++) {
-        console.log(readCards[i]);
-    }
-    // $('#read-counter').text(readCounter);
+    // var readCards = $('.read-in-red');
+    // for(var i = 0; i < readCards.length; i++) {
+    //     console.log(readCards[i]);
+    // }  
 }
 
 function deleteCard() {
