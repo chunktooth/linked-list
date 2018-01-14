@@ -1,5 +1,6 @@
-// keep total current read & unread count
+// keep total unread count
 // clear all read bookmarks
+
 $('.title-input').on('input', enableButton);
 $('.link-input').on('input', enableButton);
 $('.enter-btn').on('click', addToCard);
@@ -30,17 +31,14 @@ function addToCard(e){
     <button class="delete-btn">Delete</button>
   </div>`);
     clearFields();
-    countTotalCards();   
+    countTotalCards();
+    unreadCards();
 }
 
 function clearFields() {
     $('.title-input').val('');
     $('.link-input').val('');
     $('.required-input').text('');
-}
-
-function countTotalCards() {
-    $('#link-counter').text($('.site-box').length);
 }
 
 function validateLink() {
@@ -55,14 +53,21 @@ function validateLink() {
     }
 }
 
+function deleteCard() {
+    $(this).parent().remove();
+    countTotalCards();
+}
+
+function countTotalCards() {
+    $('#link-counter').text($('.site-box').length);
+}
+
 function readCard() {
     $(this).toggleClass('read-in-red');
     $(this).parent().toggleClass('marked-read');
     $('#read-counter').text($('.read-in-red').length);
-    $
 }
 
-function deleteCard() {
-    $(this).parent().remove();
+function unreadCards() {
+    $('#unread-counter').text($('.to-read').length);
 }
-

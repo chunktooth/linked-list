@@ -35,7 +35,7 @@ body {
 
 /* form styles */
 h1 {
-  /*margin: auto 0;*/
+  margin-bottom: 5px; 
   font-size: 60.8px;
   font-weight: 800;
   color: #FFFFFF;
@@ -47,6 +47,7 @@ h1 {
 }
 
 .required-input {
+  margin-top: 0;
   color: #FFFFFF;
 }
 
